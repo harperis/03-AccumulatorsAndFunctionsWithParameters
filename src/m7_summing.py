@@ -4,17 +4,17 @@ in its simplest classic forms:
    SUMMING:       total = total + number
 
 Authors: David Mutchler, Dave Fisher, Vibha Alangar, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Isaac Harper.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
-
+import math
 def main():
     """ Calls the   TEST   functions in this module. """
     run_test_sum_cosines()
     run_test_sum_square_roots()
 
 
-def run_test_sum_cosines():
+def run_test_sum_cosines(n):
     """ Tests the   sum_cosines   function. """
     # ------------------------------------------------------------------
     # TODO: 2. Implement this function.
@@ -28,9 +28,15 @@ def run_test_sum_cosines():
     print('--------------------------------------------------')
     print('Testing the   sum_cosines   function:')
     print('--------------------------------------------------')
+    total = 0
+    if n > 0:
+        for k in range(n):
+            total = total + math.cos(k)
+        print(k, total)
+        return total
 
 
-def sum_cosines(n):
+def sum_cosines():
     """
     What comes in:  A non-negative integer n.
     What goes out:  The sum of the cosines of the integers
@@ -48,7 +54,11 @@ def sum_cosines(n):
     #   No fair running the code of  sum_cosines  to GENERATE
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
-
+    # Test 1
+    expected = .0123
+    answer = sum_cosines(6)
+    print('expected', expected)
+    print('answer', answer)
 
 def run_test_sum_square_roots():
     """ Tests the   sum_square_roots   function. """

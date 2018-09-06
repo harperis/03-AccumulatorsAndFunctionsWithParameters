@@ -7,8 +7,8 @@ This module demonstrates and practices:
   -- UNIT TESTING.
 
 Authors: David Mutchler, Dave Fisher, Vibha Alangar, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Isaac Harper.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import m4t_tester
 
@@ -38,7 +38,7 @@ def main():
 def run_test_sum_of_digits():
     """ Tests the  sum_of_digits   function. """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function, as follows:
+    # Done: 2. Implement this TEST function, as follows:
     #
     #  Step 1:  This TEST function tests the  sum_of_digits  function.
     #    So read the doc-string of the  sum_of_digits  function
@@ -67,11 +67,30 @@ def run_test_sum_of_digits():
     answer = sum_of_digits(826)
     print('Test 1 expected:', expected)
     print('       actual:  ', answer)
-
+    # Test 2:
+    expected = 15
+    answer = sum_of_digits(78)
+    print('Test 2 expected', expected)
+    print('actual:', answer)
     # ------------------------------------------------------------------
     # TO DO: 2 (continued).
     # Below this comment, add 3 more test cases of your own choosing.
     # ------------------------------------------------------------------
+    # Test 3:
+    expected = 7
+    answer = sum_of_digits(1231)
+    print('Test 3 expected', expected)
+    print('actual:', answer)
+    # Test 4
+    expected = 8
+    answer = sum_of_digits(422)
+    print('Test 4 expected', expected)
+    print('actual:', answer)
+    # Test 5
+    expected = 21
+    answer = sum_of_digits(9831)
+    print('Test 5 expected', expected)
+    print('actual', answer)
 
 
 def sum_of_digits(number):
@@ -107,7 +126,7 @@ def sum_of_digits(number):
     return digit_sum
 
 
-def run_test_digits_in_cube():
+def run_test_digits_in_cube(n):
     """ Tests the   digits_in_cube   function. """
     # ------------------------------------------------------------------
     # TODO: 3. Implement this function.
@@ -136,7 +155,9 @@ def run_test_digits_in_cube():
     print('-----------------------------------------------------')
 
 
-def digits_in_cube(n):
+def digits_in_cube():
+
+
     """
     What comes in:  A positive integer.
     What goes out:  The sum of the digits in the CUBE of the integer.
@@ -145,6 +166,7 @@ def digits_in_cube(n):
       If the integer (n) is 5    (so n cubed is 125),
       this function returns (1 + 2 + 5), which is 8.
     """
+
     # ------------------------------------------------------------------
     # TODO: 4. Implement and test this function.
     #   Note that you should write its TEST function first (above).
@@ -183,6 +205,7 @@ def digits_in_power(n, k):
       this function returns 18
       since 12 to the 3rd power is 1728 (whose digits sum to 18).
     """
+
     # ------------------------------------------------------------------
     # TODO: 6. Implement and test this function.
     #
@@ -255,4 +278,4 @@ def fancy_sums_of_digits(n):
 # This unusual form is necessary for the special testing we provided.
 # ----------------------------------------------------------------------
 if __name__ == '__main__':
-    main()
+main()
